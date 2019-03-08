@@ -4,9 +4,9 @@ using System;
 
 namespace Starbuzz
 {
-    class Program
-    {
-        static void Main(string[] args)
+  class Program
+  {
+    static void Main(string[] args)
     {
         
       Beverage beverage = new Espresso();
@@ -24,11 +24,14 @@ namespace Starbuzz
       beverage = new Whip(beverage);
       Display(beverage);
 
+      beverage.Size = Size.Venti;
+      Display(beverage);
+
     }
 
     private static void Display(Beverage beverage)
     {
-      Console.WriteLine($"{beverage.Description}: ${beverage.Cost}");
+      Console.WriteLine($"{beverage.Size} {beverage.Description}: ${beverage.Cost}");
     }
   }
 }
